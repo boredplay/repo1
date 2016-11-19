@@ -1,1 +1,1 @@
-console.log("Starting app...", __dirname);
+ console.log("Starting app... __dirname:", __dirname);
