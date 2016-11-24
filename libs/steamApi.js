@@ -10,7 +10,7 @@ module.exports = function(){
 
                         req.on("end", function(){
                                 var result = JSON.parse(body);
-                                // var imgs = result.responseData.results;
+                                // var imgs = result.playerstats.stats;
                                 // var html = "";
                                 // for(var x=0; x<imgs.length; x++){
                                 //         html = html+"<img src=\""+imgs[x].unescapedUrl+"\" />" ;
