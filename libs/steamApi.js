@@ -1,6 +1,6 @@
 var http = require("http");
 module.exports = function(){
-        this. getUserStatsForGame = function(cb){
+        this.getUserStatsForGame = function(cb){
                 http.get("http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002?appid=730&steamid=76561198237693572&key=D3AB52863B9F0893D06D2C5777624008", 
                 function(req){
                         body = "";
@@ -9,13 +9,8 @@ module.exports = function(){
                         });
 
                         req.on("end", function(){
-                                var result = JSON.parse(body);
-                                // var imgs = result.playerstats.stats;
-                                // var html = "";
-                                // for(var x=0; x<imgs.length; x++){
-                                //         html = html+"<img src=\""+imgs[x].unescapedUrl+"\" />" ;
-                                // }//end for
-                                cb(result);
+                                // var json = JSON.parse(body);
+                                cb(body);
                         });
                 });
         }
